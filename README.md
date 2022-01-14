@@ -1,3 +1,3 @@
 # Voltz
 
-Bonjour
+Bonjour, nous sommes vendredi.
