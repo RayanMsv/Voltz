@@ -1,3 +1,3 @@
 # Voltz
 
-Bonjour, nous sommes lundi.
+Bonjour, nous sommes jeudi et le webhook devrait marcher.
