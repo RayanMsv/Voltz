@@ -1,0 +1,568 @@
+/*
+ *
+ *    Some imports
+ *
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open%20Sans&display=swap");
+
+/*
+ *
+ *    Global style
+ *
+ */
+
+body{
+    margin: 0;
+    font-family:"Muli", sans-serif;
+    font-size: 16px;
+}
+
+img {
+    max-width: min(100%, 1000px);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, #borgar-munu_pages a:hover {
+    color: #454545;
+}
+
+a:active, #borgar-munu_pages a:active {
+    color: #82BCCE;
+}
+
+br {
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 42px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 46px;
+}
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+}
+
+.h2link {
+    margin-top: -129px; 
+    padding-top: 129px; 
+    display: inline-block;
+    z-index: -2;
+}
+
+.h3link {
+    margin-top: -92px; 
+    padding-top: 92px; 
+    display: inline-block;
+    z-index: -2;
+}
+
+button {
+    transition-duration: 0.3s;
+    background: #82BCCE;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #000;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-family:"Muli", sans-serif;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #6db3c7;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+button:active {
+    background: #459bb4;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+/*
+*
+*    Header's style
+*
+*/
+
+header {
+    z-index: 1;
+    width: 100vw;
+    height: 75px;
+    margin: 0;
+    position: fixed;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav {
+    width: 100vw;
+    height: 75px;
+    margin: 0;
+    background-color: #101010;
+    color: #FFF;
+}
+
+#logo {
+    width: 140px;
+    height: 62px;
+    margin-top: 1px;
+    background-image: url("../medias/voltz.png");
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+nav a {
+    height: 50px;
+    margin: 10px;
+}
+
+nav div {
+    height: 60px;
+    display: block;
+    margin: auto;
+}
+
+#nav-list {
+    margin-top: -63px;
+    padding-left: calc(100% - 590px);
+    padding-top: 10px;
+
+}
+
+#nav-list ul {
+    height: 55px;
+}
+
+#nav-list li {
+    display: inline;
+}
+
+#nav-list a {
+    margin: 0;
+    padding: 15px;
+}
+
+#nav-list a:hover {
+    background-color: #171717;
+    color: #E1E1E1;
+}
+
+#nav-list a:active {
+    color: #F6D62E;
+}
+
+/*
+ * Die borgar-munu basis was made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ */
+
+#borgar-munu {
+    height: 0;
+}
+
+#borgar-munu_toggle
+{
+    display: none;
+    position: relative;
+    top: -40px;
+    left: calc(200% - 100vw - 105px);
+    -webkit-user-select: none;
+    user-select: none;
+    max-width: calc(100% - 100px);
+}
+
+#borgar-munu_toggle input
+{
+    display: block;
+    width: 38px;
+    height: 35px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+
+#borgar-munu_toggle span
+{
+    display: block;
+    width: 36px;
+    height: 3px;
+    margin-bottom: 10px;
+    position: relative;
+    background: #FFF;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+#borgar-munu_toggle span:first-child
+{
+    transform-origin: 0% 0%;
+}
+
+#borgar-munu_toggle span:nth-last-child(2)
+{
+    transform-origin: 0% 100%;
+}
+
+#borgar-munu_toggle input:checked ~ span
+{
+    opacity: 1;
+    transform: rotate(-45deg) translate(-14px, 19px);
+}
+
+#borgar-munu_toggle input:checked ~ span:nth-last-child(3)
+{
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2) translate(27px, 0px);
+}
+
+#borgar-munu_toggle input:checked ~ span:nth-last-child(2)
+{
+    transform: rotate(45deg) translate(-15px, -22px);
+}
+
+header hr {
+    margin-top: -3px;
+    height: 1px;
+    border: #82BCCE solid 1px;
+    color: #82BCCE;
+    background-color: #82BCCE;
+}
+
+#borgar-nav {
+    margin-left: calc(-100vw + 55px);
+    margin-top: 16px;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    transition-delay: 0.5s;
+    height: 0;
+}
+
+#borgar-munu_toggle input:checked ~ #borgar-nav {
+    transition-delay: 0s;
+    height: calc(100vh - 75px);
+}
+
+#borgar-munu_pages {
+    background-color: #FFF;
+    font-size: calc(3vw + 3vh);
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 75px);
+    margin: 0 0 0 0;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+  
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#borgar-munu_pages a {
+    color: #000;
+    margin: 0;
+}
+
+#borgar-munu_pages .br {
+    padding-top: calc(16vh - 3.5vw - 15px);
+    padding-bottom: 0;
+    height: 0;
+}
+
+#borgar-munu_toggle input:checked ~ div div
+{
+    transform: none;
+}
+
+/*
+ *
+ *    Main part's style
+ *
+ */
+
+main {
+    padding-top: 75px;
+    background-color: #F6D62E;
+    min-height: calc(100vh - 350px);
+    padding-bottom: 13px;
+}
+
+#title {
+    text-align: center;
+}
+
+
+section {
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 24px 42px;
+    border-radius: 10px;
+}
+
+section p a {
+    text-decoration: underline;
+}
+
+.section0 {
+    background-color: #FFF;
+    color: #000;
+}
+
+.section1 {
+    background-color: #171717;
+    color: #FFF;
+}
+
+.section1 a:hover {
+    color: #E1E1E1;
+}
+
+.section1 a:active {
+    color: #82BCCE;
+}
+
+.section2 {
+    background-color: #F6D62E;
+    color: #000;
+}
+
+.section3 {
+    background-color: #171717;
+    color: #F6D62E;
+}
+
+.section3 a:hover {
+    color: #C6A909;
+}
+
+.section3 a:active {
+    color: #82BCCE;
+}
+
+.section4 {
+    background-color: #82BCCE;
+    color: #000;
+}
+
+.section4 a:active {
+    color: #F6D62E;
+}
+
+.section4 button {
+    transition-duration: 0.3s;
+    background: #FFD6F5;
+}
+
+.section4 button:hover {
+    background: #FFA6E9;
+}
+
+.section4 button:active {
+    background: #FF68DA;
+}
+
+.section5 {
+    background-color: #FFD6F5;
+    color: #000;
+}
+
+.numlist0 {
+    padding-left: 26px;
+    font-size: 20px;
+}
+
+.numlist0 li {
+    padding-left: 5px;
+}
+
+.numlist1 {
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+.numlist1 li {
+    padding-left: 0px;
+}
+
+.us {
+    margin: 0 -10px;
+}
+
+.card {
+    display: inline-block;
+    vertical-align: top;
+    font-family: "Open Sans", sans-serif;
+    width: calc(25% - 20px);
+    text-align: center;
+    padding: 0 10px;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*
+ *
+ *    Footer's style
+ *
+ */
+
+footer {
+    width: 100%;
+    background-color: #171717;
+    color: #FFF;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+footer hr {
+    margin-top: -3px;
+    height: 1px;
+    border: #FFD6F5 solid 1px;
+    color: #FFD6F5;
+    background-color: #FFD6F5;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+#logo-epita {
+    margin-top: 20px;
+    height: 69px;
+}
+
+#foot-list {
+    padding-bottom: 10px;
+    font-size: 14px;
+    display: block;
+}
+
+#foot-list ul {
+    padding: 0;
+    text-align: center;
+}
+
+#foot-list li {
+    display: inline-block;
+    margin: 15px;
+}
+
+#foot-list a {
+    margin: 0;
+}
+
+#foot-list a:hover {
+    text-decoration: underline;
+    color: #E1E1E1;
+}
+
+#foot-list a:active {
+    color: #F6D62E;
+}
+
+.classification {
+    height: 69px;
+    margin: 0 5px;
+}
+
+/*
+ *
+ *    Small viewport friendly style
+ *
+ */
+
+@media only screen and (max-width: 765px) {
+    body, button {
+        font-size: calc(10px + 0.8vw);
+    }
+
+    h1 {
+        font-size: calc(3vw + 3vh);
+    }
+
+    h2 {
+        font-size: calc(2.5vw + 2.5vh);
+    }
+    
+    #nav-list {
+        display: none;
+    }
+ 
+    #borgar-munu_toggle
+    {
+        display: block;
+    }
+
+    section {
+        padding: calc(10px + 1.8vw) calc(10px + 4.1vw);
+    }
+
+    .us {
+        margin: 0 -5px;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        padding: 0 5px;
+    }
+
+    .card img {
+        border-radius: 5px;
+    }
+    
+    #logo-epita {
+        margin-top: calc(12px + 0.8vw);
+        height: calc(38px + 4vw);
+    }
+
+    #foot-list {
+        font-size: calc(10px + 0.52vw);
+    }
+    
+    #foot-list li {
+        margin: calc(9px + 0.78vw);
+    }
+
+    .classification {
+        height: calc(36px + 3vw);
+        margin: 0 calc(3px + 0.26vw);
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .card {
+        width: calc(100% - 10px);
+    }
+}
