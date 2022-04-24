@@ -1,0 +1,7 @@
+/* With different namesfor pages menu takes a different place */ 
+
+#nav-list {
+    margin-top: -63px;
+    padding-left: calc(100% - 512px);
+    padding-top: 10px;
+}

@@ -1,0 +1,35 @@
+#poster {
+    text-align: center;
+    width: 100%;
+}
+
+#eeyi {
+    width: 1000px;
+    max-width: calc(100% - 20px);
+    position: relative;
+    margin-bottom: max(calc((-100% + 20px) * 1679 / 2983), -562.85px);
+    top: calc(21px + 0.45vw);
+}
+
+#wu {
+    width: 1000px;
+    max-width: calc(100% - 20px);
+    position: relative;
+    margin-bottom: max(calc((-100% + 20px) * 1679 / 2983), -562.85px);
+    top: calc(6px + 0.12vw);
+}
+
+#yu {
+    width: 1000px;
+    max-width: calc(100% - 20px);
+    position: relative;
+    top: calc(3px + 0.06vw);
+}
+
+#voltz {
+    width: 1000px;
+    max-width: calc(100% - 20px);
+    background-color: #000;
+    border-radius: 10px;
+    position: relative;
+}
